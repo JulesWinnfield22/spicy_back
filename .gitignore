@@ -1,0 +1,10 @@
+.DS_Store
+/node_modules/
+/dist
+/root@116.203.72.196
+/uploads
+.env
+.env.production
+# React Router
+/.react-router/
+/build/

@@ -1,0 +1,10 @@
+!#/bin/bash
+
+echo "Login to your strip account"
+stripe login
+
+# keep this running in one tab
+stripe listen --forward-to http://localhost:3003/api/v1/orders/webhook
+
+# run thin in new tab
+stripe trigger checkout.session.completed
