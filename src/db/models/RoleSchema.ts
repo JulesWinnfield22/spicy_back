@@ -1,6 +1,6 @@
 import { model, Schema, Document } from 'mongoose';
 import { IPermission } from './PermissionSchema';
-import { Role } from 'src/interface';
+import { Role } from '../../interface';
 
 export interface IRole extends Role {}
 

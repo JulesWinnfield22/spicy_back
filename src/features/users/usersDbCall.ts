@@ -1,9 +1,9 @@
 import userModel from "../../db/models/UsersSchema";
-import RoleSchema from "src/db/models/RoleSchema";
+import RoleSchema from "../../db/models/RoleSchema";
 import { FunctionResponse, RegisterUser, User } from "../../interface";
 import { asyncCall } from "../../utils/utils";
 import mongoose, { QueryOptions } from "mongoose";
-import PermissionSchema from "src/db/models/PermissionSchema";
+import PermissionSchema from "../../db/models/PermissionSchema";
 
 export const getUsers = async () => {
   return await userModel.find();

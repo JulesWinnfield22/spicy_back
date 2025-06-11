@@ -1,5 +1,5 @@
-import { Schema, model, Document } from 'mongoose';
-import { Permission } from 'src/interface';
+import { Schema, model } from 'mongoose';
+import { Permission } from '../../interface';
 
 export interface IPermission extends Permission {}
 

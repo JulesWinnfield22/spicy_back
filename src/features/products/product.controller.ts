@@ -10,7 +10,7 @@ import {
 } from "./productsDbCall";
 import ProductDTO from "../../dtos/ProductDTO";
 import { asyncCall, getPagination } from "../../utils/utils";
-import ProductsSchema from "src/db/models/ProductsSchema";
+import ProductsSchema from "../../db/models/ProductsSchema";
 
 export async function getTopDeals(req: Request, res: Response) {
   const result = await asyncCall(

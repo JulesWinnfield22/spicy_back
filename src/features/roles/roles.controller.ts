@@ -10,7 +10,7 @@ import {
 } from "./rolesDbCall";
 import RoleDTO from "../../dtos/RoleDto";
 import { Status } from "../../interface";
-import { Pagination } from "src/utils/utils";
+import { Pagination } from "../../utils/utils";
 
 /**
  * Get all roles with pagination

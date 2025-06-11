@@ -3,7 +3,7 @@ import { createContent, getContent, createImageContent, createTextContent } from
 import sanitize from 'sanitize-html'
 import { isLoogedIn } from '../auth/middleware/isLoogedIn'
 import { ifAdmin } from '../auth/middleware/isAdmin'
-import fileToFileName from 'src/middlewares/fileToFileName'
+import fileToFileName from '../../middlewares/fileToFileName'
 
 const routes = express.Router()
 

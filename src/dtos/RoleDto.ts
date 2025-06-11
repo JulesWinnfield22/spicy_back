@@ -1,4 +1,4 @@
-import { Permission, Role } from "src/interface";
+import { Permission, Role } from "../interface";
 
 export function PermissionDTO(permission: Permission) {
 	if (!permission) return {};

@@ -65,33 +65,37 @@ async function main() {
   app.use("/api/v1", verificationRoutes);
   app.use("/api/v1", addressRoutes);
 
-  if (process.env.NODE_ENV == 'production') {
-    const options = {
-      key: fs.readFileSync(
-        "/etc/letsencrypt/live/api.marbaraktrading.com/privkey.pem"
-      ),
-      cert: fs.readFileSync(
-        "/etc/letsencrypt/live/api.marbaraktrading.com/fullchain.pem"
-      ),
-    };
+  // if (process.env.NODE_ENV == 'production') {
+  //   const options = {
+  //     key: fs.readFileSync(
+  //       "/etc/letsencrypt/live/api.marbaraktrading.com/privkey.pem"
+  //     ),
+  //     cert: fs.readFileSync(
+  //       "/etc/letsencrypt/live/api.marbaraktrading.com/fullchain.pem"
+  //     ),
+  //   };
 
-    https.createServer(options, app).listen(443, () => {
-      console.log("HTTPS Server running on https://subdomain.yourdomain.com");
-    });
+  //   https.createServer(options, app).listen(443, () => {
+  //     console.log("HTTPS Server running on https://subdomain.yourdomain.com");
+  //   });
 
-    http
-      .createServer((req, res) => {
-        res.writeHead(301, {
-          Location: "https://" + req.headers["host"] + req.url,
-        });
-        res.end();
-      })
-      .listen(80);
-  } else {
-		app.listen(port, () => {
-			console.log(`Server is running on [http://localhost:${port}]`);
-		});
-	}
+  //   http
+  //     .createServer((req, res) => {
+  //       res.writeHead(301, {
+  //         Location: "https://" + req.headers["host"] + req.url,
+  //       });
+  //       res.end();
+  //     })
+  //     .listen(80);
+  // } else {
+	// 	app.listen(port, () => {
+	// 		console.log(`Server is running on [http://localhost:${port}]`);
+	// 	});
+	// }
+
+  app.listen(port, () => {
+    console.log(`Server is running on [http://localhost:${port}]`);
+  });
 }
 
 main();

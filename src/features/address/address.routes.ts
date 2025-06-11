@@ -1,5 +1,5 @@
 import express from "express";
-import { fetchCanadianAddresses } from "src/utils/addressSearch";
+import { fetchCanadianAddresses } from "../../utils/addressSearch";
 
 const routes = express.Router();
 

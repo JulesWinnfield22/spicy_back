@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import { asyncCall, ProductsStatus, weightUnit } from "src/utils/utils";
+import { asyncCall, ProductsStatus, weightUnit } from "../../utils/utils";
 import CounterSchema from "./CounterSchema";
 
 const productsSchema = new Schema(

@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import { DiscountStatus } from "src/utils/utils";
+import { DiscountStatus } from "../../utils/utils";
 
 const globalDiscountSchema = new Schema({
   discountPercentage: {

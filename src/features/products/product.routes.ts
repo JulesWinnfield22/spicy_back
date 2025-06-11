@@ -13,9 +13,8 @@ import { isLoogedIn } from "../auth/middleware/isLoogedIn";
 import { ifAdmin } from "../auth/middleware/isAdmin";
 import { Permission } from "../../auth/permissions";
 import { requirePermission } from "../../auth/middleware/hasPermission";
-import fileToFileName from "src/middlewares/fileToFileName";
-import ProductsSchema from "src/db/models/ProductsSchema";
-import validateDocData from "src/middlewares/validateData";
+import fileToFileName from "../../middlewares/fileToFileName";
+import validateDocData from "../../middlewares/validateData";
 
 const routes = express.Router();
 

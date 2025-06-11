@@ -10,9 +10,9 @@ import { isLoogedIn } from "../auth/middleware/isLoogedIn";
 import { validatePassword } from "../auth/middleware/validatePassword";
 import { ifAdmin } from "../auth/middleware/isAdmin";
 import { checkUserAlreadyExist } from "../auth/middleware/checkUserAlreadyExist";
-import { User } from "src/interface";
-import { hashPassword } from "src/utils/passwordHash";
-import validateDocData from "src/middlewares/validateData";
+import { User } from "../../interface";
+import { hashPassword } from "../../utils/passwordHash";
+import validateDocData from "../../middlewares/validateData";
 import userModel from "../../db/models/UsersSchema";
 const routes = express.Router();
 
